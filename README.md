@@ -1,1 +1,0 @@
-# Japan-quiz-Wserver
