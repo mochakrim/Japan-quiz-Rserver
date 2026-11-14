@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kuis Materi</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; max-width: 550px; margin: auto; line-height: 1.5; }
+        .btn-pilihan { 
+            display: block; width: 100%; padding: 14px; margin: 10px 0; 
+            font-size: 16px; text-align: left; cursor: pointer; 
+            background-color: #007bff; color: white; border: none; border-radius: 8px; 
+        }
+        .btn-pilihan:hover { background-color: #0056b3; }
+        .alert { background-color: #d4edda; color: #155724; padding: 14px; border-radius: 8px; margin-bottom: 18px; }
+        .kuis-box { background-color: #f8f9fa; border: 1px solid #ddd; padding: 16px; border-radius: 8px; margin-bottom: 20px; }
+        .soal-item { border-bottom: 1px solid #e2e2e2; padding-bottom: 12px; margin-bottom: 14px; }
+        .opsi-label { display: block; padding: 8px 10px; margin: 6px 0; background: #fff; border: 1px solid #ddd; border-radius: 6px; cursor: pointer; }
+        .opsi-label:hover { background: #eef5ff; }
+        .btn-submit { width: 100%; padding: 14px; font-size: 16px; font-weight: bold; background-color: #17a2b8; color: white; border: none; border-radius: 8px; cursor: pointer; }
+        .selesai { 
+            display: inline-block; margin-top: 20px; padding: 10px 20px;
+            background-color: #28a745; color: white; text-decoration: none; border-radius: 6px; 
+        }
+    </style>
+</head>
+<body>
+    <h2>Halo, {{NAMA}}!</h2>
+    
+    <!-- Bagian ini menampilkan info, menu metode, atau soal kuis -->
+    {{INFO_PILIHAN}}
+    {{FORM_KUIS}}
+
+    <!-- DAFTAR_TOMBOL otomatis diatur oleh Python (hanya muncul di halaman utama) -->
+    {{DAFTAR_TOMBOL}}
+
+    <hr>
+    <a href="/selesai" class="selesai">Selesai</a>
+</body>
+</html>
